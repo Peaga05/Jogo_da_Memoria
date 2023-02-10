@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', 'cursive';
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #c7cdd3;
+}
+.card{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+}
+.cardFront{
+    background-color: #101c2c;
+    transform: rotateY(180deg);
+}
+.cardBack{
+    background-color: #05c3ff;
+    font-size: 30px;
+    color: #101c2c;
+}
+.cardBack, .cardFront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.45);
+    backface-visibility: hidden;
+}
+.flip{
+    transform: rotateY(180deg);
+}
+.gamerOver{
+    background-color: rgb(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 50px;
+    color: white;
+}
+.resert{
+    background-color: yellow;
+    border: none;
+    font-size: 20px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.resert:hover{
+    background-color: rgb(182, 182, 68);
+}
+.gameBord{
+    max-width: 700px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+@media screen and (max-width:850px){
+    .card{
+        width: 80px;
+        height: 80px;
+    }
+
+    .iconStyle{
+    width: 60px;
+    }
+}
+@media screen and (max-width:421px){
+    .card{
+        width: 60px;
+        height: 60px;
+    }
+    .resert{
+        font-size: 16px;
+    }
+    .gamerOver{
+        font-size: 30px;
+    }
+
+}
+@media screen and (max-width:321px){
+    .iconStyle{
+        width: 50px;
+    }
+    .resert{
+        font-size: 16px;
+        height: 60px;
+    }
+    .gamerOver{
+        font-size: 25px;
+    }
+
+}
+@media screen and (max-width:280px){
+    .iconStyle{
+        width: 40px;
+    }
+    .card{
+        width: 50px;
+        height: 50px;
+    }
+    .resert{
+        font-size: 12px;
+        height: 40px;
+    }
+    .gamerOver{
+        font-size: 20px;
+    }
+
+}
